@@ -5,13 +5,18 @@ import org.springframework.beans.factory.annotation.Required;
 
 public class Robot {
 
-	@Autowired
 	private Chip chip;
+	private Sensor sensor;
 
-	public Chip getChip() {
-		return chip;
+	@Autowired
+	public Robot(Sensor sensor) {
+		this.sensor = sensor;
 	}
 
+	@Autowired
+	public Robot(Chip chip) {
+		this.chip = chip;
+	}
 
 	@Override
 	public String toString() {

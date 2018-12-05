@@ -9,14 +9,20 @@
 
 
 	<context:annotation-config />
-	
+
+	<bean id="sensor" class="com.ld.beans.Sensor">
+		<constructor-arg value="101" />
+		<constructor-arg value="10mm" />
+	</bean>
+
 	<bean id="chip" class="com.ld.beans.Chip">
-		<property name="id" value="101"/>
+		<property name="id" value="101" />
 		<property name="type" value="electic" />
 	</bean>
-	
-	<bean id="robot" class="com.ld.beans.Robot">
-		<!-- <property name="chip" ref="chip" /> -->
-	</bean>
+
+	<bean id="robot" class="com.ld.beans.Robot" />
+
+
+
 
 </beans>
